@@ -19,15 +19,15 @@ void setup() {
 
 
   
-  for(int i = 0; i<4  ; i++){
+  for(int i = 0; i<4  ; i++){     // inicializando as entradas dos motores
     pinMode(motorA[i], OUTPUT);
     pinMode(motorB[i],OUTPUT);}
     Serial.begin(9600);
 }
 
-void loop() {
- 
-   for(int i = 3; i>=0; i--){
+void loop() {   //loop para setar os pinos para os motores girarem
+  
+   for(int i = 3; i>=0; i--){ //alterando i++ ou i-- vc alterna o sentido dos motores
         Serial.println(motorA[i]);
         Serial.println(motorB[i]);
         digitalWrite(motorA[i], HIGH);
